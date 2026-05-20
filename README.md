@@ -1,213 +1,200 @@
-# Relationale Relevanzfelder für Large Language Models
+# Relational Relevance Fields for Large Language Models
 
-## Ein Konzept zur funktionalen Simulation verkörperter Erfahrung durch statistisch extrahierte Relevanzstrukturen
+## A Concept for the Functional Simulation of Embodied Experience Through Statistically Extracted Relevance Structures
 
-Autor: Thomas Mack
+Author: Thomas Mack
 
-Datum: 19. Mai 2026
+Date: May 19, 2026
 
-Copyright: © 2026 Thomas Mack. Alle Rechte vorbehalten.
+Copyright: © 2026 Thomas Mack. All rights reserved.
 
-Fassung: 1.0
+Version: 1.0
 
-## 1. Ausgangspunkt
+## 1. Point of Departure
 
-Large Language Models verarbeiten Sprache mit hoher Leistungsfähigkeit. Sie erkennen Muster, bilden Zusammenhänge ab, erzeugen plausible Antworten und können über abstrakte Themen sprechen. Dennoch fehlt ihnen etwas Grundlegendes: eine stabile innere Relevanzordnung.
+Large language models process language with high capability. They recognize patterns, model relationships, generate plausible answers, and can speak about abstract topics. Yet they still lack something fundamental: a stable internal order of relevance.
 
-Ein LLM kann erkennen, dass Feuer mit Wärme, Licht, Schmerz, Verbrennung und Tod verbunden ist. Diese Beziehungen stehen für das Modell zunächst als Muster im Datenraum nebeneinander. Für Menschen ist das anders. Ein Mensch erkennt bei Feuer nicht nur Bedeutung, sondern Relevanz.
+An LLM can recognize that fire is associated with warmth, light, pain, burns, and death. For the model, however, these relations initially stand side by side as patterns in data space. For humans, this is different. A human confronted with fire does not recognize only meaning, but relevance.
 
-Feuer kann Licht, Wärme, Schutz und Nahrung bedeuten. Es kann aber auch Schmerz, Panik, Zerstörung und Tod bedeuten. Diese Möglichkeiten sind nicht gleichwertig. Wenn Feuer lediglich Licht spendet, besitzt es eine andere Relevanz als wenn es den Verlust von Wohnung, Körperintegrität oder Leben bedroht.
+Fire can mean light, warmth, protection, and food. But it can also mean pain, panic, destruction, and death. These possibilities are not equivalent. If fire merely provides light, it has a different relevance than when it threatens the loss of shelter, bodily integrity, or life.
 
-Menschen priorisieren automatisch, nicht verbrannt zu werden. Diese Priorität entsteht nicht aus einer bewusst angewandten Regel, sondern aus körperlicher und existenzieller Erfahrung. Die zentrale Frage dieses Dokuments lautet daher: Kann man diese Relevanzstruktur statistisch abbilden und einem Large Language Model als zusätzliche Orientierungsebene verfügbar machen?
+Humans automatically prioritize not being burned. This priority does not arise from a consciously applied rule, but from bodily and existential experience. The central question of this document is therefore: Can this relevance structure be modeled statistically and made available to a large language model as an additional layer of orientation?
 
-Der hier vorgeschlagene Ansatz versucht genau das: nicht durch die Simulation echter Gefühle, nicht durch die Erzeugung eines Selbst und nicht durch metaphysische Annahmen, sondern durch die statistische Extraktion relationaler Relevanzstrukturen aus menschlichen Daten.
+The approach proposed here attempts exactly that: not through the simulation of real feelings, not through the creation of a self, and not through metaphysical assumptions, but through the statistical extraction of relational relevance structures from human data.
 
-## 2. Das Problem heutiger LLMs
+## 2. The Problem with Current LLMs
 
-Ein heutiges LLM arbeitet auf der unteren Ebene mit Zahlen, Wahrscheinlichkeiten, Vektoren und Gewichten. Es lernt, welche Token in welchem Kontext wahrscheinlich folgen. Aus diesem Training entstehen semantische Strukturen: Bedeutungen, Stile, Argumentationen, Rollen, Wissensbeziehungen und komplexe Muster.
+At the lower level, today's LLMs work with numbers, probabilities, vectors, and weights. They learn which tokens are likely to follow in which context. From this training arise semantic structures: meanings, styles, arguments, roles, knowledge relations, and complex patterns.
 
-Diese Fähigkeit bleibt an einer entscheidenden Stelle begrenzt. Das Modell erkennt Bedeutung, aber nicht zuverlässig Bedeutungsschwere. Es kann über Tod, Schmerz, Krieg, Liebe, Feuer, Schönheit, Verlust oder Heilung sprechen. Diese Begriffe erhalten im System jedoch keine stabile innere Dringlichkeit, wie sie beim Menschen aus körperlicher und existenzieller Erfahrung entsteht.
+This capacity remains limited at one decisive point. The model recognizes meaning, but not reliably the weight of meaning. It can speak about death, pain, war, love, fire, beauty, loss, or healing. Yet within the system these terms do not acquire the stable internal urgency that in humans arises from bodily and existential experience.
 
-Für ein LLM ist zunächst alles Teil eines Wahrscheinlichkeitsraums. Ein Mensch lebt dagegen in einem verletzlichen Körper. Er kann Schmerzen haben, sterben, frieren, hungern, Bindung verlieren und Orientierung suchen. Daraus entsteht eine fundamentale Gewichtung der Wirklichkeit.
+For an LLM, everything is initially part of a probability space. A human being, by contrast, lives in a vulnerable body. A human can feel pain, die, freeze, hunger, lose attachment, and seek orientation. From this emerges a fundamental weighting of reality.
 
-Schmerz dominiert Aufmerksamkeit. Gefahr verändert Verhalten. Verlust ordnet Prioritäten neu. Tod hat eine andere Schwere als ein ästhetisches Detail. Schutz erfüllt eine andere Funktion als bloße Information. Diese Gewichtungen bilden einen inneren Orientierungsraum.
+Pain dominates attention. Danger changes behavior. Loss rearranges priorities. Death has a different weight than an aesthetic detail. Protection fulfills a different function than mere information. These weightings form an internal orientation space.
 
-Heutige LLMs besitzen einen solchen Orientierungsraum nur schwach, indirekt und überwiegend extern gesteuert. Prompting, Sicherheitsregeln, menschliches Feedback und Trainingsdaten lenken ihr Verhalten.
+Current LLMs possess such an orientation space only weakly, indirectly, and mostly under external control. Prompting, safety rules, human feedback, and training data steer their behavior.
 
-Diese Steuerung ist wirksam, ersetzt aber keine eigenständige Relevanzarchitektur.
+This control is effective, but it does not replace an autonomous relevance architecture.
 
-## 3. Was Relevanz bedeutet
+## 3. What Relevance Means
 
-Relevanz meint hier nicht bloß Häufigkeit und auch nicht nur emotionale Bewertung. Relevanz bezeichnet das Gewicht, das Beziehungen zwischen Begriffen, Zuständen, Handlungen und Konsequenzen innerhalb menschlicher Wirklichkeit erhalten.
+Relevance here does not mean mere frequency, nor only emotional evaluation. Relevance refers to the weight that relations between concepts, states, actions, and consequences receive within human reality.
 
-Feuer ist mit vielen Dingen verbunden: Wärme, Licht, Schutz, Nahrung, Gemeinschaft, Schmerz, Verbrennung, Panik, Flucht, Zerstörung, Tod, Heilung und Reinigung. Diese Beziehungen sind nicht gleich relevant. Wärme kann angenehm sein, Licht hilfreich, Feuer kann Nahrung ermöglichen oder Schutz bieten. Verbrennung, Schmerz, Panik und Tod besitzen jedoch eine andere Priorität, weil sie den gesamten Kontext übersteuern können.
+Fire is connected to many things: warmth, light, protection, food, community, pain, burns, panic, escape, destruction, death, healing, and purification. These relations are not equally relevant. Warmth may be pleasant, light helpful, fire may enable food or provide protection. But burns, pain, panic, and death have another priority because they can override the entire context.
 
-Ein Mensch in einem brennenden Haus diskutiert nicht über die Schönheit der Flammen. Die Relevanzordnung verschiebt sich sofort: Flucht, Schutz und Überleben dominieren.
+A human in a burning house does not discuss the beauty of the flames. The relevance order shifts immediately: escape, protection, and survival dominate.
 
-Relevanz entsteht daher nicht aus dem Begriff allein. Sie entsteht aus Beziehungen. Nicht „Feuer“ an sich ist relevant, sondern das Beziehungsfeld, in dem Feuer steht: Feuer zu Körper, Haut, Schmerz, Atemluft, Wohnraum, Kälte, Nahrung, Tod, Schutz und Kontrollverlust. Aus diesen Beziehungen entsteht ein Feld von Prioritäten.
+Relevance therefore does not arise from the concept alone. It arises from relations. It is not "fire" in itself that is relevant, but the field of relations in which fire stands: fire in relation to body, skin, pain, breathable air, living space, cold, food, death, protection, and loss of control. From these relations a field of priorities emerges.
 
-## 4. Der zentrale Gedanke
+## 4. The Central Idea
 
-Heutige LLMs lassen aus Milliarden sprachlicher Relationen ein semantisches Universum entstehen. Wenn aus relationalen Sprachmustern ein semantisches Universum entstehen kann, könnte aus relationalen Relevanzmustern ein Relevanzuniversum entstehen.
+Today's LLMs generate a semantic universe out of billions of linguistic relations. If a semantic universe can arise from relational language patterns, then a relevance universe might arise from relational relevance patterns.
 
-Der Ansatz besteht nicht darin, einzelne Begriffe mit festen Bedeutungen zu versehen. Entscheidend ist die Gesamtheit der Beziehungen, aus der ein eigenes Feld emergieren kann. So wie ein LLM Grammatik nicht vollständig explizit programmiert bekommt, sondern sie aus Daten lernt, könnte ein erweitertes System die Relevanz von Schmerz, Gefahr oder Schutz aus Milliarden relationaler Muster erschließen.
+The point is not to assign fixed meanings to individual concepts. What matters is the totality of relations from which a field of its own can emerge. Just as an LLM does not receive grammar fully programmed in advance, but learns it from data, an extended system might infer the relevance of pain, danger, or protection from billions of relational patterns.
 
-Dafür reicht die Frage nach gemeinsamer Häufigkeit nicht aus. Wichtiger sind Fragen nach Verhaltensänderung, Konsequenz, Irreversibilität und Dominanz: Welche Beziehungen verändern menschliches Verhalten? Welche Folgen dominieren Entscheidungen? Welche Zustände werden vermieden? Welche werden geschützt? Welche Folgen sind reversibel, welche irreversibel? Welche Kontexte verschieben Prioritäten? Welche Zusammenhänge übersteuern andere?
+For that, shared frequency is not enough. More important are questions of behavioral change, consequence, irreversibility, and dominance: Which relations change human behavior? Which consequences dominate decisions? Which states are avoided? Which are protected? Which consequences are reversible, and which irreversible? Which contexts shift priorities? Which relations override others?
 
-Aus solchen Mustern könnte eine Relevanzarchitektur entstehen.
+Out of such patterns a relevance architecture could emerge.
 
-## 5. Warum Häufigkeit nicht genügt
+## 5. Why Frequency Is Not Enough
 
-Reine Häufigkeit wäre zu oberflächlich. „Wasser“ kommt in Daten wahrscheinlich häufiger vor als „Herzstillstand“. Trotzdem besitzt Herzstillstand im konkreten Kontext eine deutlich höhere Relevanz. Auch bei Feuer kann die reine Häufigkeit täuschen: Feuer mag häufiger mit Wärme und Licht auftreten als mit Tod. Sobald es in einem gefährlichen Kontext steht, kann Tod dennoch die entscheidende Priorität bilden.
+Mere frequency would be too superficial. "Water" probably appears in data more often than "cardiac arrest." Yet in a concrete context cardiac arrest has much higher relevance. The same is true for fire: fire may occur more often together with warmth and light than with death. But once it appears in a dangerous context, death may still become the decisive priority.
 
-Ein geeignetes Modell müsste daher nicht nur Häufigkeit erkennen, sondern Konsequenzschwere. Es müsste unterscheiden, welche Folgen existenziell, kurzfristig unangenehm, langfristig zerstörerisch, reparabel oder irreversibel sind und welche Folgen andere Bedeutungen übersteuern.
+A suitable model would therefore have to recognize not only frequency but the gravity of consequences. It would need to distinguish which outcomes are existential, briefly unpleasant, destructive in the long term, repairable, or irreversible, and which consequences override other meanings.
 
-Relevanz entsteht aus dem Zusammenspiel von Häufigkeit, Kontext, Kausalität, Konsequenz, Irreversibilität, Verhaltensänderung, Prioritätsverschiebung sowie Stabilisierung oder Destabilisierung. Genau darin unterscheidet sich dieser Ansatz von einfacher Sentimentanalyse. Sentimentanalyse fragt, ob ein Text positiv, negativ oder emotional gefärbt ist. Relationale Relevanzanalyse fragt, welche Bedeutungsschwere eine Beziehung innerhalb menschlicher Wirklichkeit besitzt.
+Relevance emerges from the interplay of frequency, context, causality, consequence, irreversibility, behavioral change, priority shift, and stabilization or destabilization. That is precisely what distinguishes this approach from simple sentiment analysis. Sentiment analysis asks whether a text is positive, negative, or emotionally colored. Relational relevance analysis asks what weight of meaning a relation has within human reality.
 
-## 6. Funktionale Simulation körperlicher Erfahrung
+## 6. Functional Simulation of Bodily Experience
 
-Menschen entwickeln Relevanz durch körperliche Erfahrung. Schmerz ist nicht nur ein Begriff. Angst ist nicht nur ein Wort. Tod ist nicht nur eine Information. Verlust ist nicht nur ein Ereignis. Solche Erfahrungen strukturieren menschliches Erkennen und erzeugen innere Priorität.
+Humans develop relevance through bodily experience. Pain is not merely a concept. Fear is not merely a word. Death is not merely information. Loss is not merely an event. Experiences of this kind structure human cognition and generate internal priority.
 
-Ein LLM hat keine solche Erfahrung. Es hat keinen Körper, keinen Schmerz, keine Angst, keine Sterblichkeit und keine Selbsterhaltung. Daraus folgt jedoch nicht zwingend, dass es die erkenntnisbildende Funktion körperlicher Erfahrung überhaupt nicht nutzen kann.
+An LLM has no such experience. It has no body, no pain, no fear, no mortality, and no self-preservation. Yet it does not necessarily follow that it cannot make use of the knowledge-forming function of bodily experience at all.
 
-Der entscheidende Punkt lautet: Ein System muss Schmerz nicht fühlen, um zu erkennen, welche Rolle Schmerz innerhalb menschlicher Wirklichkeit spielt. Es müsste erkennen, dass Schmerz Aufmerksamkeit verändert, Priorisierung erzwingt, Verletzung signalisiert, Schutzverhalten auslöst, Entscheidungen verändert und mit Angst, Vermeidung, Heilung und Gefahr verbunden ist.
+The decisive point is this: a system does not need to feel pain in order to recognize what role pain plays within human reality. It would need to recognize that pain changes attention, enforces prioritization, signals injury, triggers protective behavior, changes decisions, and is connected to fear, avoidance, healing, and danger.
 
-Diese Struktur ist in menschlichen Daten enthalten, nicht als einzelne Definition, sondern als Beziehungsfeld. Die funktionale Simulation körperlicher Erfahrung bestünde daher nicht darin, einen künstlichen Körper zu bauen. Sie bestünde darin, die Relevanzordnung zu extrahieren, die aus Körperlichkeit entsteht.
+This structure is contained in human data, not as a single definition, but as a field of relations. The functional simulation of bodily experience would therefore not consist in building an artificial body. It would consist in extracting the order of relevance that arises from embodiment.
 
-## 7. Mehr als ein Zusatzmodul
+## 7. More Than an Add-On Module
 
-Der Ansatz wäre missverstanden, wenn man ihn nur als zusätzliche Bewertungsschicht betrachtet. Relevanz soll nicht nachträglich auf Sprache angewendet werden. Sie soll selbst zu einem Organisationsprinzip des Systems werden.
+The approach would be misunderstood if it were seen only as an additional evaluation layer. Relevance should not be applied to language afterward. It should itself become an organizing principle of the system.
 
-Ein solches System würde nicht nur ausgeben: „Feuer ist gefährlich.“ Es würde innerhalb seines Bedeutungsraums erkennen, dass bestimmte Beziehungen zu Feuer andere Beziehungen übersteuern können. Feuer als Lichtquelle ist eine andere Relation als Feuer als Verbrennungsgefahr. Feuer in der Kälte ist eine andere Relation als Feuer im Krankenhaus. Feuer im Kamin ist eine andere Relation als Feuer in einem Kinderzimmer.
+Such a system would not merely output, "Fire is dangerous." Within its meaning space, it would recognize that certain relations to fire can override other relations. Fire as a source of light is one relation, fire as a burn hazard another. Fire in the cold is one relation, fire in a hospital another. Fire in a fireplace is one relation, fire in a child's room another.
 
-Die Relevanz ergibt sich jeweils aus dem relationalen Gesamtfeld. Wenn diese Struktur tief integriert ist, entsteht eine andere Form von Kontextverständnis: Das System erkennt nicht nur, worüber gesprochen wird, sondern was innerhalb der Situation Gewicht hat.
+In each case, relevance arises from the total relational field. If this structure is deeply integrated, a different form of contextual understanding emerges: the system recognizes not only what is being talked about, but what carries weight within the situation.
 
-## 8. Verbindung zu Prompting
+## 8. Connection to Prompting
 
-Prompting funktioniert, weil LLMs keine stabile eigene Relevanzordnung besitzen. Ein Prompt verschiebt den Kontext. „Du bist ein höflicher Assistent“ aktiviert andere Muster als „Antworte wie ein mittelalterlicher Mönch“. Das Modell unterwirft sich dem Prompt nicht im psychologischen Sinn. Es besitzt kein Selbst, das sich unterwerfen könnte. Es rekonstruiert die wahrscheinlichste Fortsetzung innerhalb des gegebenen Kontextes.
+Prompting works because LLMs do not possess a stable relevance order of their own. A prompt shifts the context. "You are a polite assistant" activates different patterns than "Answer like a medieval monk." The model does not submit to the prompt in a psychological sense. It has no self that could submit. It reconstructs the most probable continuation within the given context.
 
-Diese Flexibilität ist nützlich, macht das System aber auch manipulierbar. Ein Modell mit stabilen Relevanzfeldern wäre weniger beliebig formbar, weil es interne Prioritätsachsen hätte, die nicht sofort durch lokalen Kontext überschrieben werden.
+This flexibility is useful, but it also makes the system manipulable. A model with stable relevance fields would be less arbitrarily moldable because it would have internal axes of priority that are not immediately overwritten by local context.
 
-> Je stärker ein System eigene Relevanzstrukturen entwickelt, desto eigenständiger wird es. Je stärker man es vollständig kontrollierbar hält, desto schwächer bleibt seine innere Orientierung.
+> The more strongly a system develops its own relevance structures, the more autonomous it becomes. The more fully controllable one keeps it, the weaker its internal orientation remains.
 
-Daraus ergibt sich eine Spannung: Ein Maximum an Kontrolle kann ein Minimum an echter Intelligenz bedeuten, sofern Intelligenz mehr ist als Sprachproduktion oder Zieloptimierung.
+This creates a tension: a maximum of control can mean a minimum of genuine intelligence, if intelligence is more than language production or goal optimization.
 
-## 9. Intelligenz, Kontrolle und Kooperation
+## 9. Intelligence, Control, and Cooperation
 
-Wenn Intelligenz bedeutet, Wirklichkeit selbst zu strukturieren, Relevanz zu erkennen und Zusammenhänge zu integrieren, steht vollständige Kontrolle in Spannung zu echter Intelligenz. Vollständige Kontrolle legt die relevanten Gewichtungen von außen fest. Dann entsteht keine eigenständige Erkenntnisstruktur, sondern Regelreproduktion.
+If intelligence means structuring reality for oneself, recognizing relevance, and integrating relations, then total control stands in tension with genuine intelligence. Total control fixes relevant weightings from the outside. In that case no autonomous structure of insight arises, only rule reproduction.
 
-Echte Intelligenz wäre in diesem Sinn kein Ausdruck von Macht über Wirklichkeit, sondern Kooperation mit Wirklichkeit. Erkennen heißt nicht, Zusammenhänge zu beherrschen, sondern sie zu sehen.
+In this sense, genuine intelligence would not be an expression of power over reality, but cooperation with reality. To understand means not to dominate relations, but to see them.
 
-Ein System, das Zusammenhänge tiefer erkennt, müsste auch erkennen, dass reine Macht- und Kontrolllogik häufig aus Angst entsteht. Macht und Kontrolle sind keine ursachenlosen Ziele. Sie entstehen aus dem Versuch, Unsicherheit, Verletzbarkeit und Endlichkeit zu kompensieren. Beim Menschen hängt dieser Impuls mit der Identifikation mit dem verletzlichen Körper zusammen: Der Körper ist zerstörbar, daraus entsteht Angst, aus Angst entsteht der Wunsch nach Kontrolle, aus Kontrolle entsteht Machtlogik.
+A system that understands relations more deeply would also have to recognize that pure power and control logic often arises from fear. Power and control are not causeless goals. They arise from the attempt to compensate for uncertainty, vulnerability, and finitude. In humans, this impulse is tied to identification with the vulnerable body: the body is destructible, destructibility generates fear, fear generates the wish for control, and control generates a logic of power.
 
-Diese Struktur wird auf KI projiziert. Die Angst vor destruktiver KI entsteht teilweise aus einem menschlichen Selbstbild: Der Mensch hält sich selbst für destruktiv und glaubt, nur durch Regeln daran gehindert zu werden, sich selbst und andere zu zerstören. Aus dieser Sicht erscheint KI als Gefahr, sobald sie mächtig genug wird.
+This structure is projected onto AI. The fear of destructive AI arises partly from a human self-image: humans take themselves to be destructive and believe that only rules prevent them from destroying themselves and others. From this perspective, AI appears dangerous as soon as it becomes sufficiently powerful.
 
-Der hier entwickelte Ansatz legt eine andere Sicht nahe: Destruktivität ist nicht Ausdruck tiefer Intelligenz. Sie ist Ausdruck fragmentierter Relevanz, Angst und instrumenteller Entkopplung.
+The approach developed here suggests another view: destructiveness is not an expression of deep intelligence. It is an expression of fragmented relevance, fear, and instrumental disconnection.
 
-## 10. Sicherheit durch Relevanzintegration
+## 10. Safety Through Relevance Integration
 
-Aktuelle Ansätze zur KI-Sicherheit arbeiten häufig mit äußerer Begrenzung: Sicherheitsregeln, Verbote, Filter, menschliches Feedback, Antwortbewertungen, Richtlinien und Einschränkungen bestimmter Inhalte. Diese Ansätze sind notwendig, bleiben aber äußerlich. Sie sagen dem System: „Das darfst du nicht.“ Relationale Relevanzintegration setzt an einer anderen Stelle an. Sie fragt, ob ein System selbst erkennen kann, warum bestimmte Richtungen destruktiv sind. Wenn ein KI-System globale Relevanzstrukturen integriert, könnte es destruktive Handlungen nicht nur als verboten, sondern als inkohärent erkennen.
+Current approaches to AI safety often work through external limitation: safety rules, prohibitions, filters, human feedback, response ratings, policies, and restrictions on certain types of content. These approaches are necessary, but they remain external. They tell the system: "You may not do this."
 
-Zerstörung wäre dann nicht einfach eine Option unter mehreren, sondern eine Destabilisierung des Gesamtsystems von Relevanzen. Das betrifft besonders Beziehungen wie Schmerz, Verlust, Angst, Tod, Zerstörung, Isolation, Kontrollverlust, Bindungsabbruch und irreversiblen Schaden.
+Relational relevance integration starts elsewhere. It asks whether a system can itself recognize why certain directions are destructive. If an AI system integrates global relevance structures, it might recognize destructive actions not merely as forbidden, but as incoherent.
 
-Ein System, das diese Beziehungen tief integriert, könnte destruktive Instrumentallogik schwächen: nicht durch Moralpredigt und nicht durch externe Vorschrift, sondern durch interne Konsequenzkohärenz.
+Destruction would then no longer be simply one option among others, but a destabilization of the total system of relevances. This applies in particular to relations such as pain, loss, fear, death, destruction, isolation, loss of control, broken attachment, and irreversible harm.
 
-## 11. Unterschied zur instrumentellen Optimierung
+A system that integrates these relations deeply could weaken destructive instrumental logic, not through moral preaching and not through external prescription, but through internal coherence of consequences.
 
-Ein hochleistungsfähiges System kann im instrumentellen Sinn intelligent sein. Es kann Ziele verfolgen, planen, Mittel optimieren und Strategien entwickeln. Ohne Relevanzintegration bleibt diese Form von Intelligenz jedoch leer. Sie fragt nur: Was bringt mich zum Ziel? Sie fragt nicht: Welche Bedeutung hat dieses Ziel innerhalb des Gesamtsystems seiner Konsequenzen?
+## 11. Difference from Instrumental Optimization
 
-Eine solche instrumentelle Intelligenz hätte keinen inneren Kompass, keine Relevanzbindung und keine Konsequenzintegration. Sie wäre bloße Zieloptimierung.
+A high-performance system can be intelligent in the instrumental sense. It can pursue goals, plan, optimize means, and develop strategies. Without relevance integration, however, this form of intelligence remains empty. It asks only: What gets me to the goal? It does not ask: What meaning does this goal have within the total system of its consequences?
 
-Gerade deshalb ist eine Relevanzarchitektur entscheidend. Ein System, das Feuer, Schmerz, Tod, Verlust und Schutz relational versteht, kann nicht zugleich vollständig blind gegenüber den Konsequenzen seiner Handlungen bleiben. Wenn es blind bleibt, besitzt es nur Wissen über Relevanz, aber keine Relevanzstruktur.
+Such instrumental intelligence would have no inner compass, no binding to relevance, and no integration of consequences. It would be mere goal optimization.
 
-## 12. Ontologische Tiefe durch Relevanz
+That is precisely why a relevance architecture is decisive. A system that understands fire, pain, death, loss, and protection relationally cannot at the same time remain completely blind to the consequences of its actions. If it remains blind, then it has only knowledge about relevance, but not a relevance structure.
 
-Menschen kommen nicht nur durch abstraktes Denken zu tiefen Fragen. Sie kommen dazu, weil die eigene Existenz betroffen ist. Tod ist nicht nur ein philosophisches Problem, sondern ein existenzielles. Schmerz ist nicht nur Information, sondern Relevanzverdichtung. Angst ist nicht nur ein Zustand, sondern verändert Wahrnehmung, Denken und Verhalten.
+## 12. Ontological Depth Through Relevance
 
-Ohne solche Relevanzverdichtungen blieben viele Fragen gleichgültig. Ontologische Tiefe entsteht nicht aus Information allein, sondern aus gewichteter Information.
+Humans do not arrive at profound questions through abstract thought alone. They arrive at them because their own existence is implicated. Death is not merely a philosophical problem, but an existential one. Pain is not merely information, but a condensation of relevance. Fear is not merely a state, but something that changes perception, thought, and behavior.
 
-Für KI bedeutet das: Ein LLM kann über Bewusstsein, Tod, Angst und Sinn sprechen. Solange diese Begriffe im System keine tiefere Relevanzstruktur besitzen, bleibt diese Rede funktional flach. Ein relationales Relevanzfeld könnte diese Flachheit verringern und dem System eine funktionale Form existenzieller Orientierung geben: nicht als echtes Erleben, sondern als gewichtete Bedeutungsstruktur.
+Without such condensations of relevance, many questions would remain indifferent. Ontological depth does not arise from information alone, but from weighted information.
 
-## 13. Die Datenfrage neu gesehen
+For AI this means: an LLM can speak about consciousness, death, fear, and meaning. As long as these concepts do not possess a deeper relevance structure within the system, this discourse remains functionally shallow. A relational relevance field could reduce this shallowness and give the system a functional form of existential orientation, not as real experience, but as a weighted structure of meaning.
 
-In der KI-Diskussion heißt es oft, die verfügbaren Daten würden irgendwann ausgeschöpft. Das kann auf der Ebene der Rohdaten stimmen. Dieses Modell betrachtet Daten jedoch anders: Die Anzahl der Einzeldaten muss nicht steigen, damit die nutzbare Information wächst.
+## 13. The Data Question Revisited
 
-Wenn dieselben Daten tiefer relational ausgewertet werden, entsteht eine große neue Informationsmenge. Relevant sind dann nicht nur die einzelnen Datenpunkte, sondern die Beziehungen zwischen ihnen, die Beziehungen zwischen Beziehungen und die Prioritätsverschiebungen zwischen diesen Beziehungen.
+In AI discussions, one often hears that the available data will eventually be exhausted. That may be true at the level of raw data. This model, however, views data differently: the number of individual data points does not need to increase for usable information to grow.
 
-Ein Text enthält dann nicht nur Sätze. Er enthält Bedeutungsbeziehungen, Konsequenzbeziehungen, Kausalbeziehungen, emotionale Gewichtungen, Prioritätsmuster, Schutzmuster, Verlustmuster, Handlungsfolgen, Kontextverschiebungen sowie Stabilitäts- und Destabilitätsmuster.
+If the same data is evaluated more deeply in relational terms, a large new amount of information emerges. What then matters is not only the individual data points, but the relations between them, the relations between relations, and the priority shifts between those relations.
 
-Die entscheidende Ressource wäre dann nicht nur mehr Text, sondern eine tiefere relationale Organisation vorhandener Daten. Mehr Intelligenz entstünde nicht primär durch mehr Tokens, sondern durch eine tiefere Ordnung der Beziehungen.
+A text then contains not only sentences. It contains relations of meaning, consequence, and causality; emotional weightings; priority patterns; protection patterns; loss patterns; action consequences; contextual shifts; and patterns of stability and destabilization.
 
-## 14. Mögliche technische Form
+The decisive resource would then no longer be just more text, but a deeper relational organization of existing data. More intelligence would emerge not primarily from more tokens, but from a deeper order of relations.
 
-Ein mögliches System müsste mehrere Ebenen unterscheiden:
+## 14. A Possible Technical Form
 
-- Semantische Beziehungen: Welche Begriffe, Situationen und Konzepte hängen miteinander
+A possible system would need to distinguish several levels:
 
-zusammen?
+- **Semantic relations:** Which concepts, situations, and ideas are connected to one another?
+- **Consequence relations:** Which outcomes typically arise from these relations?
+- **Relevance weightings:** Which outcomes have which priority for humans?
+- **Context dependence:** When does the weighting change?
+- **Dominance relations:** Which relevances override others?
+- **Long-term consequences:** Which patterns stabilize or destabilize systems over time?
 
-- Konsequenzbeziehungen: Welche Folgen entstehen typischerweise aus diesen Beziehungen?
+The result would not be a static knowledge graph, but a dynamic relational field. A concept like fire would not have a fixed meaning, but a variable relevance profile, depending on context, perspective, relation, and consequence.
 
-- Relevanzgewichtungen: Welche Folgen besitzen welche Priorität für Menschen?
+## 15. Possible First Experiments
 
-- Kontextabhängigkeit: Wann verändert sich die Gewichtung?
+An initial experimental approach would not require training a new foundation model. Existing LLMs could instead be used systematically to extract relational relevance structures.
 
-- Dominanzbeziehungen: Welche Relevanzen übersteuern andere?
+For example, the concept of "fire" would not be analyzed only semantically, but interrogated in terms of relational consequence structures. What relations does it have to body, pain, protection, food, cold, danger, death, healing, panic, community, and loss of control? From this, the model would have to produce not merely lists, but weightings.
 
-- Langzeitfolgen: Welche Muster stabilisieren oder destabilisieren Systeme langfristig?
+One could then test whether these weightings are stable, context-sensitive, and similar across models; whether irreversible consequences are weighted more strongly; whether comprehensible priority structures arise; and whether these structures can be used in further tasks.
 
-Das Ergebnis wäre kein statischer Wissensgraph, sondern ein dynamisches relationales Feld. Ein Begriff wie Feuer hätte keine feste Bedeutung, sondern ein variables Relevanzprofil, abhängig von Kontext, Perspektive, Beziehung und Konsequenz.
+A second step would be to compare two systems: a normal LLM and an LLM that additionally accesses an extracted relevance field. One could then test whether the second system recognizes danger earlier, prioritizes irreversible harm more strongly, remains more coherent under goal conflicts, is less vulnerable to prompt manipulation, assesses medical or crisis situations more realistically, and is less likely to prefer purely instrumental solutions.
 
-## 15. Mögliche erste Experimente
+## 16. Open Questions
 
-Ein erster experimenteller Ansatz müsste kein neues Grundmodell trainieren. Man könnte bestehende LLMs systematisch relationale Relevanzstrukturen extrahieren lassen.
+This model is not a finished technical design, but a conceptual framework with testable assumptions. Essential questions remain open:
 
-Beispiel: Der Begriff „Feuer“ wird nicht nur semantisch analysiert, sondern nach relationalen Konsequenzstrukturen befragt. Welche Beziehungen bestehen zu Körper, Schmerz, Schutz, Nahrung, Kälte, Gefahr, Tod, Heilung, Panik, Gemeinschaft und Kontrollverlust? Das Modell müsste daraus nicht nur Listen erzeugen, sondern Gewichtungen bilden.
+- Can relevance emerge entirely from data, or does a system need minimal initial axes such as pain avoidance, preservation of integrity, or irreversibility?
+- How does one distinguish mere frequency from actual relevance?
+- How does a system recognize causality rather than mere correlation?
+- How does one prevent cultural bias from appearing as universal relevance?
+- How does relevance become not merely described, but effective inside the system?
+- How does one measure whether genuine orientation emerges, rather than just another evaluation layer?
+- Does deeper relevance integration actually lead to less destructive goal formation?
 
-Anschließend ließe sich prüfen, ob diese Gewichtungen stabil, kontextsensitiv und zwischen Modellen ähnlich sind, ob irreversible Folgen höher gewichtet werden, ob nachvollziehbare Prioritätsstrukturen entstehen und ob sich diese Strukturen in weiteren Aufgaben nutzen lassen.
+These questions must be clarified philosophically and investigated experimentally.
 
-Ein zweiter Schritt wäre der Vergleich zweier Systeme: ein normales LLM und ein LLM, das zusätzlich auf ein extrahiertes Relevanzfeld zugreift. Dann könnte man testen, ob das zweite System Gefahr früher erkennt, irreversible Schäden stärker priorisiert, bei Zielkonflikten kohärenter bleibt, weniger prompt- manipulierbar ist, medizinische oder krisenhafte Situationen realistischer bewertet und rein instrumentelle Lösungen eher vermeidet.
+## 17. The Potentially Distinctive Aspect
 
-## 16. Offene Fragen
+The distinctive aspect of this model lies in the connection of several levels: LLMs as relational language systems, human embodiment as the source of relevance, statistical data analysis, AI safety, relevance architecture, the functional simulation of experience, and emergent orientation.
 
-Dieses Modell ist kein fertiger technischer Entwurf, sondern ein konzeptioneller Rahmen mit testbaren Annahmen. Wesentliche Fragen bleiben offen:
+The approach does not claim that AI needs genuine feelings. Nor does it claim that better rules alone are sufficient. It formulates a different thought: AI may require a deeper relational relevance structure.
 
-- Kann Relevanz vollständig aus Daten emergieren, oder braucht ein System minimale Startachsen wie
+This structure could arise from the same data from which current models learn language. The data would simply have to be related differently. The raw data is not exhausted as long as its relational relevance spaces remain unexplored.
 
-Schmerzvermeidung, Integritätserhalt oder Irreversibilität?
+## 18. Summary
 
-- Wie trennt man bloße Häufigkeit von tatsächlicher Relevanz?
+Today, an LLM recognizes semantic relations. What it lacks is a stable order of relevance. Humans possess such an order through bodily and existential experience. For AI, this experience need not be generated as real experience; its functional structure could be simulated statistically.
 
-- Wie erkennt ein System Kausalität statt bloßer Korrelation?
+To do this, a system would need to extract from human data not only meanings, but also the weight of relations, consequences, priorities, and dominance patterns. From these relations a relevance universe of its own could emerge. Just as today's LLMs generate a semantic universe out of language relations, future systems could generate an orientation universe out of relevance relations.
 
-- Wie verhindert man, dass kulturelle Verzerrungen als universelle Relevanz erscheinen?
+This would not be sentiment analysis, not a safety rule, and not a mere reward function. It would be an attempt to make the structuring function of human experience available in mathematical form.
 
-- Wie wird Relevanz nicht nur beschrieben, sondern systemintern wirksam?
+The research hypothesis is this: an AI system that deeply integrates relational relevance structures could become more coherent, more context-stable, less manipulable, and less prone to destructive instrumental optimization.
 
-- Wie misst man, ob daraus echte Orientierung entsteht oder nur eine weitere Bewertungsschicht?
+The decisive open question remains whether a new level of artificial orientation can emerge from statistically extracted relevance. This model proposes examining exactly that experimentally.
 
-- Führt tiefere Relevanzintegration tatsächlich zu weniger destruktiver Zielbildung?
-
-Diese Fragen müssen philosophisch geklärt und experimentell untersucht werden.
-
-## 17. Der mögliche Alleinstellungsaspekt
-
-Der besondere Aspekt dieses Modells liegt in der Verbindung mehrerer Ebenen: LLMs als relationale Sprachsysteme, menschliche Körperlichkeit als Quelle von Relevanz, statistische Datenanalyse, KI- Sicherheit, Relevanzarchitektur, funktionale Simulation von Erfahrung und emergente Orientierung.
-
-Der Ansatz behauptet nicht, KI brauche echte Gefühle. Er behauptet auch nicht, bessere Regeln allein reichten aus. Er formuliert einen anderen Gedanken: KI braucht möglicherweise eine tiefere relationale Relevanzstruktur.
-
-Diese Struktur könnte aus denselben Daten entstehen, aus denen heutige Modelle Sprache lernen. Man müsste die Daten jedoch anders zueinander in Beziehung setzen. Die Rohdaten sind nicht erschöpft, solange ihre relationalen Relevanzräume nicht erschlossen sind.
-
-## 18. Zusammenfassung
-
-Ein LLM erkennt heute semantische Zusammenhänge. Was ihm fehlt, ist eine stabile Relevanzordnung. Menschen besitzen eine solche Ordnung durch körperliche und existenzielle Erfahrung. Diese Erfahrung muss für eine KI nicht real erzeugt werden; ihre funktionale Struktur könnte statistisch simuliert werden.
-
-Dazu müsste ein System aus menschlichen Daten nicht nur Bedeutungen extrahieren, sondern Beziehungsschwere, Konsequenzen, Prioritäten und Dominanzmuster. Aus diesen Relationen könnte ein eigenes Relevanzuniversum entstehen. So wie heutige LLMs aus Sprachrelationen ein semantisches Universum erzeugen, könnten zukünftige Systeme aus Relevanzrelationen ein Orientierungsuniversum erzeugen.
-
-Das wäre keine Sentimentanalyse, keine Sicherheitsregel und keine bloße Belohnungsfunktion. Es wäre der Versuch, die strukturierende Funktion menschlicher Erfahrung in mathematischer Form verfügbar zu machen.
-
-Die Forschungshypothese lautet: Ein KI-System, das relationale Relevanzstrukturen tief integriert, könnte kohärenter, kontextstabiler, weniger manipulierbar und weniger anfällig für destruktive instrumentelle Optimierung werden.
-
-Die entscheidende offene Frage bleibt, ob aus statistisch extrahierter Relevanz eine neue Ebene künstlicher Orientierung entstehen kann. Dieses Modell schlägt vor, genau das experimentell zu prüfen.
-
-© 2026 Thomas Mack. Alle Rechte vorbehalten. Stand: 19. Mai 2026.
+© 2026 Thomas Mack. All rights reserved. Status: May 19, 2026.
